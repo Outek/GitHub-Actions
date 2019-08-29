@@ -12,7 +12,7 @@ jobs:
       - name: Build
         run: |
           pwd
-          ../build.ps1
+          ./build.ps1
         shell: pwsh
       - name: Test
         run: ./Pester.Test.ps1
