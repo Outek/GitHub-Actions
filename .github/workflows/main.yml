@@ -1,13 +1,15 @@
-name: CI
+name: Build
 
-on: [push]
+on: push
 
 jobs:
   build:
+    runs-on: windows-latest
 
-    runs-on: windows-2019
-    
     steps:
-      - name: Build Site
+      - name: Build
         run: ./build.ps1
+        shell: pwsh
+      - name: Test
+        run: ./Pester.Test.ps1
         shell: pwsh
