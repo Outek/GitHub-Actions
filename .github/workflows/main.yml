@@ -8,10 +8,6 @@ jobs:
     runs-on: windows-2019
     
     steps:
-    - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: Write-Host "Hello, world!"
-    - name: Run a multi-line script
-      run: |
-        Write-Host "First line of the action,"
-        Write-Host "and the second line."
+      - name: Build Site
+        run: ./build.ps1
+        shell: pwsh
