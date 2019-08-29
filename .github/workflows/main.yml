@@ -8,7 +8,9 @@ jobs:
 
     steps:
       - name: Build
-        run: ./build.ps1
+        run: |
+          pwd
+          ../build.ps1
         shell: pwsh
       - name: Test
         run: ./Pester.Test.ps1
