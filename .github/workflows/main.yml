@@ -7,6 +7,8 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
       - name: Build
         run: |
           pwd
