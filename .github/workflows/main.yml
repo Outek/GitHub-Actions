@@ -3,12 +3,6 @@ name: CI
 on: push
 
 jobs:
-  lint:
-    name: Run PSSA
-    runs-on: windows-latest
-    steps:
-    - uses: devblackops/github-action-psscriptanalyzer@master
-
   build:
     runs-on: windows-latest
     strategy:
